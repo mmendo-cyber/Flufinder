@@ -1,4 +1,3 @@
-
 # Function 1
 upload_fasta <- function(testfasta.txt) {
   
