@@ -1,3 +1,5 @@
+
+# Function 1
 upload_fasta <- function(testfasta.txt) {
   
   # Open library and reading FASTA files
@@ -8,6 +10,8 @@ upload_fasta <- function(testfasta.txt) {
 }
 
 
+
+# Function 3
 # Open library and split peptides into individual amino acids
 split_peptides <- function(peptides) {
   library(stringr)
@@ -15,6 +19,8 @@ split_peptides <- function(peptides) {
 }
 
 
+
+# Function 5
 count_matching_masses <- function(protein_masses, sample) {
   
   df <- as.data.frame(sapply(protein_masses, function (x)
