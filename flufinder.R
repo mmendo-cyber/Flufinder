@@ -1,6 +1,3 @@
-
-# Function 1
-
 upload_fasta <- function(testfasta.txt) {
   
   # Open library and reading FASTA files
@@ -11,18 +8,12 @@ upload_fasta <- function(testfasta.txt) {
 }
 
 
-
-# Function 3
-
 # Open library and split peptides into individual amino acids
 split_peptides <- function(peptides) {
   library(stringr)
   lapply(peptides, str_split, pattern="")
 }
 
-
-
-# Function 5
 
 count_matching_masses <- function(protein_masses, sample) {
   
@@ -33,6 +24,9 @@ count_matching_masses <- function(protein_masses, sample) {
   return(df)
 }
 
+
+
+#Function 2
 trypsinize <- function(proteins) {
   #Opening stringr for simple string manipulation
   library(stringr)
@@ -41,6 +35,9 @@ trypsinize <- function(proteins) {
   lapply(proteins, str_split_1, pattern="(?<=R|K)")
 }
 
+
+
+#Function 4
 splitpeptides_to_masses <- function(aa) {
   # Generating a vector of masses for each amino acid
   aa_masses <- c(A=71.037, R=156.101, N=114.042, D=115.026, C=103.009,
@@ -60,6 +57,9 @@ splitpeptides_to_masses <- function(aa) {
   lapply(peptide_masses, unlist)
 }
 
+
+
+#Function 6
 ggbarplot <- function(peptide_counts_table) {
   library(ggplot2)
   # Generating a barplot from the peptide counts dataframe
