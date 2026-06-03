@@ -13,3 +13,24 @@ split_peptides <- function(peptides) {
   library(stringr)
   lapply(peptides, str_split, pattern="")
 }
+
+
+count_matching_masses <- function(protein_masses, sample) {
+  
+  df <- as.data.frame(sapply(protein_masses, function (x)
+    sum(as.character(sample) %in% as.character(x))))
+  
+  names(df) <- "peptide_counts"
+  return(df)
+}
+
+
+
+
+
+
+
+
+
+
+
